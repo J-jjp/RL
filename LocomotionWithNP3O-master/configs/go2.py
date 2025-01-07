@@ -242,7 +242,7 @@ class go2(LeggedRobotCfg):
         num_costs = 9  # 需要同步修改 policy
 
     class terrain(LeggedRobotCfg.terrain):
-        mesh_type = 'plane'  # "heightfield" # none, plane, heightfield or trimesh
+        mesh_type = 'trimesh'  # "heightfield" # none, plane, heightfield or trimesh
         measure_heights = True
         include_act_obs_pair_buf = False
 
