@@ -150,7 +150,7 @@ def run_mujoco(policy, cfg):
 
                 cmd.vx=0.25
                 cmd.vy=0.0
-                cmd.dyaw= 0.3
+                cmd.dyaw= 0.1
                 #sensor->lcm
                 #单次观测
                 obs[0, 0] = omega[0] *cfg.normalization.obs_scales.ang_vel
@@ -274,7 +274,7 @@ if __name__ == '__main__':
             decimation = 20 # 50Hz
 
         class robot_config:
-            kp_all = 30
+            kp_all = 40
             kd_all = 0.75
             kps = np.array([kp_all, kp_all, kp_all, kp_all, kp_all, kp_all, kp_all, kp_all, kp_all, kp_all, kp_all, kp_all], dtype=np.double)#PD和isacc内部一致
             kds = np.array([kd_all, kd_all, kd_all, kd_all, kd_all, kd_all, kd_all, kd_all, kd_all, kd_all, kd_all, kd_all], dtype=np.double)

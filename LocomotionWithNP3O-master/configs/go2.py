@@ -33,7 +33,7 @@ from configs.legged_robot_config import LeggedRobotCfg, LeggedRobotCfgPPO
 
 class go2(LeggedRobotCfg):
     class env(LeggedRobotCfg.env):
-        num_envs = 2048  # 1024
+        num_envs = 4096  # 1024
 
         n_scan = 187
         n_priv_latent = 4 + 1 + 12 + 12 + 12 + 6 + 1 + 4 + 1 - 3 + 4
@@ -42,10 +42,10 @@ class go2(LeggedRobotCfg):
         num_observations = n_proprio + n_priv_latent + n_scan + history_len * n_proprio
         amao = 1
 
-        en_logger = True  # wanda
+        en_logger = False  # wanda
 
     class init_state(LeggedRobotCfg.init_state):
-        pos = [0.0, 0.0, 0.45]  # x,y,z [m]
+        pos = [0.0, 0.0, 0.43]  # x,y,z [m]
         """Dof order:
             FL_hip_joint
             FL_thigh_joint
@@ -67,9 +67,9 @@ class go2(LeggedRobotCfg):
             'RR_hip_joint': -0.1,   # [rad]
 
             'FL_thigh_joint': 0.8,     # [rad]
-            'RL_thigh_joint': 1.,   # [rad]
+            'RL_thigh_joint': 0.8,   # [rad]
             'FR_thigh_joint': 0.8,     # [rad]
-            'RR_thigh_joint': 1.,   # [rad]
+            'RR_thigh_joint': 0.8,   # [rad]
 
             'FL_calf_joint': -1.5,   # [rad]
             'RL_calf_joint': -1.5,    # [rad]
@@ -305,7 +305,7 @@ class go2PPO(LeggedRobotCfgPPO):
         runner_class_name = 'OnConstraintPolicyRunner'
         algorithm_class_name = 'NP3O'
         max_iterations = 4000  # 最大训练回合
-        save_interval = 500  # 保存周期
+        save_interval = 1000  # 保存周期
         num_steps_per_env = 24
         resume = False
         resume_path = '/home/pi/Downloads/LocomotionWithNP3O-master/logs/rough_go2_constraint/Aug01_23-04-52_test_barlowtwins/model_1000.pt'
