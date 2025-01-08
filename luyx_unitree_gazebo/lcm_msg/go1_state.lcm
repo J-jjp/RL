@@ -1,0 +1,15 @@
+package GO1_LCM;
+struct lowState
+{
+    int64_t  timecount;
+    float   jpFB[12];
+    float   jvFB[12];
+    float   jtFB[12];
+    float   jCmd[12];
+    float   rpy[3];
+    float   angularV[3];
+    float   linearV[3];
+    float   twistCmd[3];
+    int16_t footForce[4];
+    boolean contactFlag[4];
+}

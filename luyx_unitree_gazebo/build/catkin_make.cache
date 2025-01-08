@@ -1,0 +1,2 @@
+robots/go1_description:unitree_controller:unitree_gazebo:unitree_legged_control:unitree_ros_to_real/unitree_legged_msgs:unitree_ros_to_real/unitree_legged_real:unitree_ros_to_real/unitree_legged_sdk
+-DCATKIN_DEVEL_PREFIX=/home/jiaojunpeng/luyx_unitree_gazebo/devel -DCMAKE_INSTALL_PREFIX=/home/jiaojunpeng/luyx_unitree_gazebo/install -G Unix Makefiles
