@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/libunitreeDrawForcePlugin.pdb"
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/libunitreeDrawForcePlugin.so"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/libunitreeDrawForcePlugin.pdb"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/libunitreeDrawForcePlugin.so"
   "CMakeFiles/unitreeDrawForcePlugin.dir/plugin/draw_force_plugin.cc.o"
 )
 

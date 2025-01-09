@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_gazebo/plugin/foot_contact_plugin.cc" "/home/jiaojunpeng/luyx_unitree_gazebo/build/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/plugin/foot_contact_plugin.cc.o"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_gazebo/plugin/foot_contact_plugin.cc" "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build/unitree_gazebo/CMakeFiles/unitreeFootContactPlugin.dir/plugin/foot_contact_plugin.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -30,7 +30,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/include"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/gazebo-11"

@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/jiaojunpeng/luyx_unitree_gazebo/install/setup.sh
+    local-name: /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/install/setup.sh

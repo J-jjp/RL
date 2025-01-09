@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_udp"
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_udp.pdb"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_udp"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_udp.pdb"
   "CMakeFiles/ros_udp.dir/src/exe/ros_udp.cpp.o"
 )
 

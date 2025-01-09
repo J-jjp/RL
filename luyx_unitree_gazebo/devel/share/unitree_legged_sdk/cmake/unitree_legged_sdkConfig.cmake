@@ -67,14 +67,14 @@ set(unitree_legged_sdk_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(unitree_legged_sdk_SOURCE_PREFIX /home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk)
-  set(unitree_legged_sdk_DEVEL_PREFIX /home/jiaojunpeng/luyx_unitree_gazebo/devel)
+  set(unitree_legged_sdk_SOURCE_PREFIX /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk)
+  set(unitree_legged_sdk_DEVEL_PREFIX /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel)
   set(unitree_legged_sdk_INSTALL_PREFIX "")
   set(unitree_legged_sdk_PREFIX ${unitree_legged_sdk_DEVEL_PREFIX})
 else()
   set(unitree_legged_sdk_SOURCE_PREFIX "")
   set(unitree_legged_sdk_DEVEL_PREFIX "")
-  set(unitree_legged_sdk_INSTALL_PREFIX /home/jiaojunpeng/luyx_unitree_gazebo/install)
+  set(unitree_legged_sdk_INSTALL_PREFIX /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/install)
   set(unitree_legged_sdk_PREFIX ${unitree_legged_sdk_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(unitree_legged_sdk_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/include " STREQUAL " ")
+if(NOT "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/include " STREQUAL " ")
   set(unitree_legged_sdk_INCLUDE_DIRS "")
-  set(_include_dirs "/home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/include")
+  set(_include_dirs "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_le
         message(FATAL_ERROR "Project 'unitree_legged_sdk' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'unitree_legged_sdk' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'unitree_legged_sdk' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/${idir}'.  ${_report}")
     endif()
     _list_append_unique(unitree_legged_sdk_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "/home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/lib/cpp/amd64/libunitree_legged_sdk.a")
+set(libraries "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/lib/cpp/amd64/libunitree_legged_sdk.a")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jiaojunpeng/luyx_unitree_gazebo/devel/lib;/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

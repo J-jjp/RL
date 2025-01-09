@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jiaojunpeng/luyx_unitree_gazebo/src
+CMAKE_SOURCE_DIR = /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jiaojunpeng/luyx_unitree_gazebo/build
+CMAKE_BINARY_DIR = /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build
 
 # Utility rule file for download_extra_data.
 
@@ -67,6 +67,6 @@ CMakeFiles/download_extra_data.dir/clean:
 .PHONY : CMakeFiles/download_extra_data.dir/clean
 
 CMakeFiles/download_extra_data.dir/depend:
-	cd /home/jiaojunpeng/luyx_unitree_gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jiaojunpeng/luyx_unitree_gazebo/src /home/jiaojunpeng/luyx_unitree_gazebo/src /home/jiaojunpeng/luyx_unitree_gazebo/build /home/jiaojunpeng/luyx_unitree_gazebo/build /home/jiaojunpeng/luyx_unitree_gazebo/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/download_extra_data.dir/depend
 

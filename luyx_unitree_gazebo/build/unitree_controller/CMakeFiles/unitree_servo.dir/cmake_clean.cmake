@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_servo"
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_servo.pdb"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_servo"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_servo.pdb"
   "CMakeFiles/unitree_servo.dir/src/servo.cpp.o"
 )
 

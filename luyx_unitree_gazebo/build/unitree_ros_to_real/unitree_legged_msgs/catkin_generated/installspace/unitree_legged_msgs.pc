@@ -1,4 +1,4 @@
-prefix=/home/jiaojunpeng/luyx_unitree_gazebo/install
+prefix=/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/install
 
 Name: unitree_legged_msgs
 Description: Description of unitree_legged_msgs

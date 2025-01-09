@@ -1,4 +1,4 @@
-prefix=/home/jiaojunpeng/luyx_unitree_gazebo/devel
+prefix=/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel
 
 Name: unitree_controller
 Description: Description of unitree_controller

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/libunitree_legged_control.pdb"
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/libunitree_legged_control.so"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/libunitree_legged_control.pdb"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/libunitree_legged_control.so"
   "CMakeFiles/unitree_legged_control.dir/src/joint_controller.cpp.o"
   "CMakeFiles/unitree_legged_control.dir/src/unitree_joint_control_tool.cpp.o"
 )

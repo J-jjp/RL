@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_example_walk"
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_example_walk.pdb"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_example_walk"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_example_walk.pdb"
   "CMakeFiles/ros_example_walk.dir/src/exe/example_walk.cpp.o"
 )
 

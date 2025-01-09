@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_gazebo/plugin/foot_contact_plugin.cc
+/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_gazebo/plugin/foot_contact_plugin.cc
 string
 -
 gazebo/common/Events.hh

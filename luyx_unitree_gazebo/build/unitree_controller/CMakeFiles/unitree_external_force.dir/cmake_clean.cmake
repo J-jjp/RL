@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_external_force"
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_external_force.pdb"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_external_force"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_external_force.pdb"
   "CMakeFiles/unitree_external_force.dir/src/external_force.cpp.o"
 )
 

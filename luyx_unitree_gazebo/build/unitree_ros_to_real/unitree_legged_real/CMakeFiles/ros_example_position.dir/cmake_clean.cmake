@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_example_position"
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_example_position.pdb"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_example_position"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_legged_real/ros_example_position.pdb"
   "CMakeFiles/ros_example_position.dir/src/exe/example_position.cpp.o"
 )
 

@@ -1,8 +1,8 @@
-prefix=/home/jiaojunpeng/luyx_unitree_gazebo/devel
+prefix=/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel
 
 Name: unitree_legged_sdk
 Description: Description of unitree_legged_sdk
 Version: 0.0.0
-Cflags: -I/home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/include
-Libs: -L${prefix}/lib /home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/lib/cpp/amd64/libunitree_legged_sdk.a
+Cflags: -I/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/include
+Libs: -L${prefix}/lib /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_sdk/lib/cpp/amd64/libunitree_legged_sdk.a
 Requires: 

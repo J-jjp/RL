@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_move_kinetic"
-  "/home/jiaojunpeng/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_move_kinetic.pdb"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_move_kinetic"
+  "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/devel/lib/unitree_controller/unitree_move_kinetic.pdb"
   "CMakeFiles/unitree_move_kinetic.dir/src/move_publisher.cpp.o"
 )
 

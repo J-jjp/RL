@@ -1,4 +1,4 @@
-prefix=/home/jiaojunpeng/luyx_unitree_gazebo/install
+prefix=/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/install
 
 Name: go1_description
 Description: Description of go1_description

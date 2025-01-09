@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/jiaojunpeng/luyx_unitree_gazebo/src
-# Build directory: /home/jiaojunpeng/luyx_unitree_gazebo/build
+# Source directory: /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src
+# Build directory: /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

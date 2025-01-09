@@ -1,8 +1,8 @@
-# Install script for directory: /home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_real
+# Install script for directory: /home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_real
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jiaojunpeng/luyx_unitree_gazebo/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jiaojunpeng/luyx_unitree_gazebo/build/unitree_ros_to_real/unitree_legged_real/catkin_generated/installspace/unitree_legged_real.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build/unitree_ros_to_real/unitree_legged_real/catkin_generated/installspace/unitree_legged_real.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_real/cmake" TYPE FILE FILES
-    "/home/jiaojunpeng/luyx_unitree_gazebo/build/unitree_ros_to_real/unitree_legged_real/catkin_generated/installspace/unitree_legged_realConfig.cmake"
-    "/home/jiaojunpeng/luyx_unitree_gazebo/build/unitree_ros_to_real/unitree_legged_real/catkin_generated/installspace/unitree_legged_realConfig-version.cmake"
+    "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build/unitree_ros_to_real/unitree_legged_real/catkin_generated/installspace/unitree_legged_realConfig.cmake"
+    "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/build/unitree_ros_to_real/unitree_legged_real/catkin_generated/installspace/unitree_legged_realConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_real" TYPE FILE FILES "/home/jiaojunpeng/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_real/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/unitree_legged_real" TYPE FILE FILES "/home/jiaojunpeng/isaac/RL/luyx_unitree_gazebo/src/unitree_ros_to_real/unitree_legged_real/package.xml")
 endif()
 
