@@ -175,7 +175,7 @@ def play(args):
           env.commands[:,3] = 0# #header
         actions = policy.act_teacher(obs.half())# 1,736
         #print(actions)
-        if 0:#debug
+        if 1:#debug
             actions[0,0]=0#FL
             actions[0,1]=0
             actions[0,2]=3
