@@ -91,7 +91,7 @@ def play(args):
                                                       **policy_cfg_dict)
  
     model_dict = torch.load(os.path.join(ROOT_DIR, \
-    '/home/jiaojunpeng/isaac/RL/LocomotionWithNP3O-master/logs/rough_go2_constraint/Jan08_08-36-59_test_barlowtwins/model_3000.pt'))#《---------------------调用的网络模型doghome
+    '/home/jiaojunpeng/isaac/RL/LocomotionWithNP3O-master/dog_logs/1.13-2/model_1000.pt'))#《---------------------调用的网络模型doghome
 
     #if 1:#full 
     policy.load_state_dict(model_dict['model_state_dict'])
@@ -169,9 +169,9 @@ def play(args):
           commands=[0]*4#初始化为0的4维度
           rand_commands(env_cfg.commands.ranges,commands)
           print("resample comand:",commands)
-          env.commands[:,0] = 1#0.35#控制指令
-          env.commands[:,1] = 0#
-          env.commands[:,2] = 0#
+          env.commands[:,0] = 1.2#0.35#控制指令
+          env.commands[:,1] = 1#
+          env.commands[:,2] = 1#
           env.commands[:,3] = 0# #header
         actions = policy.act_teacher(obs.half())# 1,736
         #print(actions)
@@ -205,21 +205,21 @@ def play(args):
         env.gym.step_graphics(env.sim) # required to render in headless mode
         env.gym.render_all_camera_sensors(env.sim)
 
-        #----ploter
-        if en_plot:
-          #lin/ang vel
-          plotter0.plotLine(env.base_lin_vel[0, 0].item(), env.commands[0, 0].item(), labels=['actual', 'command'])
-          plotter1.plotLine(env.base_euler_xyz[0, 2].item(), env.commands[0, 3].item(), labels=['actual', 'command'])
-          # actions avg
-          plotter2.plotLine(env.dof_pos[0, 0].item(), env.action_avg[0, 0].item(),labels=['q', 'exp'])
-          plotter3.plotLine(env.dof_pos[0, 1].item(), env.action_avg[0, 1].item(),labels=['q', 'exp'])
-          plotter4.plotLine(env.dof_pos[0, 2].item(), env.action_avg[0, 2].item(),labels=['q', 'exp'])
-        if RECORD_FRAMES:
-            img = env.gym.get_camera_image(env.sim, env.envs[0], cam_handle, gymapi.IMAGE_COLOR).reshape((512,512,4))[:,:,:3]
-            if video is None:
-                video = cv2.VideoWriter('record.mp4', cv2.VideoWriter_fourcc(*'MP4V'), int(1 / env.dt), (img.shape[1],img.shape[0]))
-            video.write(img)
-            img_idx += 1 
+        # #----ploter
+        # if en_plot:
+        #   #lin/ang vel
+        #   plotter0.plotLine(env.base_lin_vel[0, 0].item(), env.commands[0, 0].item(), labels=['actual', 'command'])
+        #   plotter1.plotLine(env.base_euler_xyz[0, 2].item(), env.commands[0, 3].item(), labels=['actual', 'command'])
+        #   # actions avg
+        #   plotter2.plotLine(env.dof_pos[0, 0].item(), env.action_avg[0, 0].item(),labels=['q', 'exp'])
+        #   plotter3.plotLine(env.dof_pos[0, 1].item(), env.action_avg[0, 1].item(),labels=['q', 'exp'])
+        #   plotter4.plotLine(env.dof_pos[0, 2].item(), env.action_avg[0, 2].item(),labels=['q', 'exp'])
+        # if RECORD_FRAMES:
+        #     img = env.gym.get_camera_image(env.sim, env.envs[0], cam_handle, gymapi.IMAGE_COLOR).reshape((512,512,4))[:,:,:3]
+        #     if video is None:
+        #         video = cv2.VideoWriter('record.mp4', cv2.VideoWriter_fourcc(*'MP4V'), int(1 / env.dt), (img.shape[1],img.shape[0]))
+        #     video.write(img)
+        #     img_idx += 1 
     print("action rate:",action_rate/num_frames)
     print("z vel:",z_vel/num_frames)
     print("xy_vel:",xy_vel/num_frames)
@@ -239,7 +239,6 @@ if __name__ == '__main__':
     task_registry.register("Tinymal",LeggedRobot,TinymalConstraintHimRoughCfg(),TinymalConstraintHimRoughCfgPPO())
     task_registry.register("go2N3poTransP1",LeggedRobot,Go2ConstraintTransP1RoughCfg(),Go2ConstraintTransP1RoughCfgPPO())
     task_registry.register("go2N3poTransP2",LeggedRobot,Go2ConstraintTransP2RoughCfg(),Go2ConstraintTransP2RoughCfgPPO())
-    task_registry.register("go1",LeggedRobot,Go1ConstraintHimRoughCfg(),Go1ConstraintHimRoughCfgPPO())
     task_registry.register("go2",LeggedRobot,go2(),go2PPO())
     RECORD_FRAMES = False
     args = get_args()

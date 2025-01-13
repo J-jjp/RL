@@ -33,7 +33,7 @@ from configs.legged_robot_config import LeggedRobotCfg, LeggedRobotCfgPPO
 
 class go2(LeggedRobotCfg):
     class env(LeggedRobotCfg.env):
-        num_envs = 2048  # 1024
+        num_envs = 1024  # 1024
 
         n_scan = 187
         n_priv_latent = 4 + 1 + 12 + 12 + 12 + 6 + 1 + 4 + 1 - 3 + 4
@@ -120,7 +120,7 @@ class go2(LeggedRobotCfg):
 
     class rewards(LeggedRobotCfg.rewards):
         soft_dof_pos_limit = 0.9
-        base_height_target = 0.4
+        base_height_target = 0.45
         clearance_height_target = -0.2 # 相对站立高度 不能和高度差距太大
         tracking_sigma = 0.35  # 0.25 小了探索出来爬行 300  0.15 小惯量  0.25 大惯量
 
@@ -160,7 +160,7 @@ class go2(LeggedRobotCfg):
             hip_pos = -0.5
 
             feet_contact_forces = -0.01
-            vel_mismatch_exp = 0.5  # lin_z; ang x,y  速度奖励大可以鼓励机器人更多移动，与摆腿耦合
+            vel_mismatch_exp = 0.3  # lin_z; ang x,y  速度奖励大可以鼓励机器人更多移动，与摆腿耦合
             low_speed = 0.2
             track_vel_hard = 0.5
             foot_slip = -0.05
@@ -242,7 +242,7 @@ class go2(LeggedRobotCfg):
         num_costs = 9  # 需要同步修改 policy
 
     class terrain(LeggedRobotCfg.terrain):
-        mesh_type = 'plane'  # "heightfield" # none, plane, heightfield or trimesh
+        mesh_type = 'trimesh'  # "heightfield" # none, plane, heightfield or trimesh
         measure_heights = True
         include_act_obs_pair_buf = False
 
@@ -304,7 +304,7 @@ class go2PPO(LeggedRobotCfgPPO):
         policy_class_name = 'ActorCriticMixedBarlowTwins'
         runner_class_name = 'OnConstraintPolicyRunner'
         algorithm_class_name = 'NP3O'
-        max_iterations = 5000  # 最大训练回合
+        max_iterations = 6000  # 最大训练回合
         save_interval = 1000  # 保存周期
         num_steps_per_env = 24
         resume = False

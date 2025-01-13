@@ -1,2 +1,2 @@
-~/MNN/build/MNNConvert -f ONNX --modelFile /home/jiaojunpeng/isaac/RL/walk-these-ways/log_train/1.9-1/body_latest.onnx --MNNModel /home/jiaojunpeng/my_dog/TOE-Dog/body_latest.mnn --bizCode MNN
-~/MNN/build/MNNConvert -f ONNX --modelFile /home/jiaojunpeng/isaac/RL/walk-these-ways/log_train/1.9-1/adaptation_module_latest.onnx --MNNModel /home/jiaojunpeng/my_dog/TOE-Dog/adaptation_module_latest.mnn --bizCode MNN
+~/MNN/build/MNNConvert -f ONNX --modelFile /home/jiaojunpeng/isaac/RL/walk-these-ways/log_train/1.13-1/body_latest.onnx --MNNModel /home/jiaojunpeng/my_dog/TOE-Dog/body_latest.mnn --bizCode MNN
+~/MNN/build/MNNConvert -f ONNX --modelFile /home/jiaojunpeng/isaac/RL/walk-these-ways/log_train/1.13-1/adaptation_module_latest.onnx --MNNModel /home/jiaojunpeng/my_dog/TOE-Dog/adaptation_module_latest.mnn --bizCode MNN

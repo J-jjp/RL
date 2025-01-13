@@ -10,7 +10,7 @@ class Terrain:
         self.cfg = cfg
         self.num_robots = num_robots
         self.type = cfg.mesh_type
-        self.difficulty_scale = 0.1
+        self.difficulty_scale = 0.5
          #总体难度 simplay时候需要减小
 
         if self.type in ["none", 'plane']:
@@ -40,8 +40,8 @@ class Terrain:
 
         self.heightsamples = self.height_field_raw
         if self.type == "trimesh":
-            print("self.cfg.vertical_scale:",self.cfg.vertical_scale)
-            print("self.cfg.horizontal_scale:",self.cfg.horizontal_scale)
+            # print("self.cfg.vertical_scale:",self.cfg.vertical_scale)
+            # print("self.cfg.horizontal_scale:",self.cfg.horizontal_scale)
             self.vertices, self.triangles = terrain_utils.convert_heightfield_to_trimesh(self.height_field_raw,
                                                                                          self.cfg.horizontal_scale,
                                                                                          self.cfg.vertical_scale,
@@ -55,7 +55,7 @@ class Terrain:
             choice = np.random.uniform(0, 1)
             difficulty = np.random.choice([0.5, 0.75, 0.9])
             terrain = self.make_terrain(choice, difficulty)
-            self.add_terrain_to_map(terrain, i, j)
+            self.add_terrain_to_map(terrain, i, j)  
 
     def curiculum(self):#循环地形
         for j in range(self.cfg.num_cols):
