@@ -180,17 +180,17 @@ def play(args):
             actions[0,1]=0
             actions[0,2]=3
 
-            # actions[0,3]=0#FR
-            # actions[0,4]=0
-            # actions[0,5]=0
+            actions[0,3]=0#FR
+            actions[0,4]=0
+            actions[0,5]=0
 
-            # actions[0,6]=0#RL
-            # actions[0,7]=3
-            # actions[0,8]=3
+            actions[0,6]=0#RL
+            actions[0,7]=3
+            actions[0,8]=3
 
-            # actions[0,9]=0#RR
-            # actions[0,10]=0
-            # actions[0,11]=0
+            actions[0,9]=0#RR
+            actions[0,10]=0
+            actions[0,11]=0
             print("obs:::",obs[0,3:6]*57.3)#att
         # actions = torch.clamp(actions,-1.2,1.2)
         # print('amaomao-------------')

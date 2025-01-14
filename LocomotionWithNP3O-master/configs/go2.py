@@ -33,7 +33,7 @@ from configs.legged_robot_config import LeggedRobotCfg, LeggedRobotCfgPPO
 
 class go2(LeggedRobotCfg):
     class env(LeggedRobotCfg.env):
-        num_envs = 1024  # 1024
+        num_envs = 2048 # 1024
 
         n_scan = 187
         n_priv_latent = 4 + 1 + 12 + 12 + 12 + 6 + 1 + 4 + 1 - 3 + 4
@@ -45,7 +45,7 @@ class go2(LeggedRobotCfg):
         en_logger = False  # wanda
 
     class init_state(LeggedRobotCfg.init_state):
-        pos = [0.0, 0.0, 0.43]  # x,y,z [m]
+        pos = [0.0, 0.0, 0.48]  # x,y,z [m]
         """Dof order:
             FL_hip_joint
             FL_thigh_joint
@@ -110,13 +110,13 @@ class go2(LeggedRobotCfg):
             height = [0.12, 0.2]  # m
 
     class asset(LeggedRobotCfg.asset):
-        file = '{ROOT_DIR}/resources/go2/urdf/go2.urdf'
+        file = '{ROOT_DIR}/resources/ask4/urdf/ASK-4.urdf'
         foot_name = "foot"  # URDF需要具有foot的link
         name = "go2_description"
         penalize_contacts_on = ["thigh", "calf"]
         terminate_after_contacts_on = ["base"]
         self_collisions = 0  # 1 to disable, 0 to enable...bitwise filter
-        flip_visual_attachments = True  # tinymal
+        flip_visual_attachments = False  # tinymal
 
     class rewards(LeggedRobotCfg.rewards):
         soft_dof_pos_limit = 0.9
@@ -242,7 +242,7 @@ class go2(LeggedRobotCfg):
         num_costs = 9  # 需要同步修改 policy
 
     class terrain(LeggedRobotCfg.terrain):
-        mesh_type = 'trimesh'  # "heightfield" # none, plane, heightfield or trimesh
+        mesh_type = 'plane'  # "heightfield" # none, plane, heightfield or trimesh
         measure_heights = True
         include_act_obs_pair_buf = False
 
