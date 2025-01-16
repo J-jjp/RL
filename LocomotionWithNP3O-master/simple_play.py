@@ -91,7 +91,7 @@ def play(args):
                                                       **policy_cfg_dict)
  
     model_dict = torch.load(os.path.join(ROOT_DIR, \
-    '/home/jiaojunpeng/isaac/RL/LocomotionWithNP3O-master/dog_logs/1.13-2/model_1000.pt'))#《---------------------调用的网络模型doghome
+    '/home/jiaojunpeng/isaac/RL/LocomotionWithNP3O-master/logs/rough_go2_constraint/Jan16_14-06-31_test_barlowtwins/model_4000.pt'))#《---------------------调用的网络模型doghome
 
     #if 1:#full 
     policy.load_state_dict(model_dict['model_state_dict'])
@@ -175,22 +175,22 @@ def play(args):
           env.commands[:,3] = 0# #header
         actions = policy.act_teacher(obs.half())# 1,736
         #print(actions)
-        if 1:#debug
+        if 0:#debug
             actions[0,0]=0#FL
-            actions[0,1]=0
-            actions[0,2]=3
+            actions[0,1]=0.8
+            actions[0,2]=-1.5
 
             actions[0,3]=0#FR
-            actions[0,4]=0
-            actions[0,5]=0
+            actions[0,4]=0.8
+            actions[0,5]=-1.5
 
             actions[0,6]=0#RL
-            actions[0,7]=3
-            actions[0,8]=3
+            actions[0,7]=0.8
+            actions[0,8]=-1.5
 
             actions[0,9]=0#RR
-            actions[0,10]=0
-            actions[0,11]=0
+            actions[0,10]=0.8
+            actions[0,11]=-1.5
             print("obs:::",obs[0,3:6]*57.3)#att
         # actions = torch.clamp(actions,-1.2,1.2)
         # print('amaomao-------------')

@@ -33,7 +33,7 @@ from configs.legged_robot_config import LeggedRobotCfg, LeggedRobotCfgPPO
 
 class go2(LeggedRobotCfg):
     class env(LeggedRobotCfg.env):
-        num_envs = 2048 # 1024
+        num_envs = 1024 # 1024
 
         n_scan = 187
         n_priv_latent = 4 + 1 + 12 + 12 + 12 + 6 + 1 + 4 + 1 - 3 + 4
@@ -242,7 +242,7 @@ class go2(LeggedRobotCfg):
         num_costs = 9  # 需要同步修改 policy
 
     class terrain(LeggedRobotCfg.terrain):
-        mesh_type = 'plane'  # "heightfield" # none, plane, heightfield or trimesh
+        mesh_type = 'trimesh'  # "heightfield" # none, plane, heightfield or trimesh
         measure_heights = True
         include_act_obs_pair_buf = False
 
