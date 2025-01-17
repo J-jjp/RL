@@ -75,21 +75,21 @@ class JoystickThread(threading.Thread):
         self.running = False
 
 def load_policy(logdir):
-    body = torch.jit.load('/home/jiaojunpeng/isaac/RL/walk-these-ways/log_train/1.13-1/body_latest.jit')
+    body = torch.jit.load('/home/jiaojunpeng/isaac/RL/walk-these-ways/runs/gait-conditioned-agility/2025-01-17/train/030453.520271/checkpoints/body_latest.jit')
     # 假设 body 是您的模型
     print(body)
     import os
-    adaptation_module = torch.jit.load('/home/jiaojunpeng/isaac/RL/walk-these-ways/log_train/1.13-1/adaptation_module_latest.jit')
+    adaptation_module = torch.jit.load('/home/jiaojunpeng/isaac/RL/walk-these-ways/runs/gait-conditioned-agility/2025-01-17/train/030453.520271/checkpoints/adaptation_module_latest.jit')
 
     dummy_input = torch.randn(1, 2102)  # 根据实际情况调整形状
 
     # 导出 body 模型为 ONNX 格式
-    body_onnx_path = '/home/jiaojunpeng/isaac/RL/walk-these-ways/log_train/1.13-1/' + 'body_latest.onnx'
+    body_onnx_path = '/home/jiaojunpeng/isaac/RL/walk-these-ways/runs/gait-conditioned-agility/2025-01-17/train/030453.520271/checkpoints/' + 'body_latest.onnx'
     torch.onnx.export(body, dummy_input, body_onnx_path, opset_version=11)
 
     # # 导出 adaptation_module 模型为 ONNX 格式
     latent_dummy_input = torch.randn(1, 2100)  # 根据实际情况调整形状
-    adaptation_module_onnx_path = '/home/jiaojunpeng/isaac/RL/walk-these-ways/log_train/1.13-1/' + 'adaptation_module_latest.onnx'
+    adaptation_module_onnx_path = '/home/jiaojunpeng/isaac/RL/walk-these-ways/runs/gait-conditioned-agility/2025-01-17/train/030453.520271/checkpoints/' + 'adaptation_module_latest.onnx'
     torch.onnx.export(adaptation_module, latent_dummy_input, adaptation_module_onnx_path, opset_version=11)
 
 
@@ -126,8 +126,8 @@ def load_env(label, headless=False):
     # config_go1(Cfg)
     Cfg.control.stiffness = {'joint': 20.}  # [N*m/rad]
     Cfg.control.damping = {'joint': 0.5}  # [N*m*s/rad]
-    Cfg.asset.file= "/home/jiaojunpeng/isaac/RL/walk-these-ways/resources/robots/go2/urdf/go2.urdf"
-    Cfg.asset.flip_visual_attachments = True
+    Cfg.asset.file= "/home/jiaojunpeng/isaac/RL/walk-these-ways/resources/robots/TOE_dog/urdf/dog.urdf"
+    Cfg.asset.flip_visual_attachments = False
     Cfg.domain_rand.push_robots = False
     Cfg.domain_rand.randomize_friction = False
     Cfg.domain_rand.randomize_gravity = False

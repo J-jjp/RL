@@ -5,7 +5,7 @@ from params_proto import PrefixProto, ParamsProto
 
 class Cfg(PrefixProto, cli=False):
     class env(PrefixProto, cli=False):
-        num_envs = 4096
+        num_envs = 512
         num_observations = 235
         num_scalar_observations = 42
         # if not None a privilige_obs_buf will be returned by step() (critic obs for assymetric training). None is returned otherwise
@@ -228,7 +228,7 @@ class Cfg(PrefixProto, cli=False):
         self_collisions = 0  # 1 to disable, 0 to enable...bitwise filter
         # replace collision cylinders with capsules, leads to faster/more stable simulation
         replace_cylinder_with_capsule = True
-        flip_visual_attachments = True  # Some .obj meshes must be flipped from y-up to z-up
+        flip_visual_attachments = False  # Some .obj meshes must be flipped from y-up to z-up
 
         density = 0.001
         angular_damping = 0.

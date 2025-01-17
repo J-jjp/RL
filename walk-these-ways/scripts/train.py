@@ -1,4 +1,4 @@
-def train_go1(headless=True):
+def train_go1(headless=False):
 
     import isaacgym
     assert isaacgym
@@ -241,7 +241,7 @@ if __name__ == '__main__':
                 - yKey: train/episode/rew_orientation_control/mean
                   xKey: iterations
                 - yKey: train/episode/rew_dof_pos/mean
-                  xKey: iterations
+                  xKey: iterations/home/jiaojunpeng/isaac/RL/walk-these-ways
                 - yKey: train/episode/command_area_trot/mean
                   xKey: iterations
                 - yKey: train/episode/max_terrain_height/mean
@@ -253,4 +253,4 @@ if __name__ == '__main__':
                 """, filename=".charts.yml", dedent=True)
 
     # to see the environment rendering, set headless=False
-    train_go1(headless=False)
+    train_go1(headless=True)

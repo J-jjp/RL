@@ -91,7 +91,7 @@ def play(args):
                                                       **policy_cfg_dict)
  
     model_dict = torch.load(os.path.join(ROOT_DIR, \
-    '/home/jiaojunpeng/isaac/RL/LocomotionWithNP3O-master/logs/rough_go2_constraint/Jan17_08-58-39_test_barlowtwins/model_6000.pt'))#《---------------------调用的网络模型doghome
+    '/home/jiaojunpeng/isaac/RL/LocomotionWithNP3O-master/logs/rough_go2_constraint/Jan17_14-41-37_test_barlowtwins/model_3000.pt'))#《---------------------调用的网络模型doghome
 
     #if 1:#full 
     policy.load_state_dict(model_dict['model_state_dict'])
