@@ -20,7 +20,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description='Deployment script.')
-    parser.add_argument('--load_model', type=str, default='/home/jiaojunpeng/isaac/LocomotionWithNP3O-masterV5/LocomotionWithNP3O-master/go1.pt',
+    parser.add_argument('--load_model', type=str, default='/home/jjp/issac/RL/LocomotionWithNP3O-master/go1.pt',
                         help='Run to load from.')
     parser.add_argument('--terrain', action='store_true', default=False)
     args = parser.parse_args()

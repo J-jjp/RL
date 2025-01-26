@@ -1,1 +1,1 @@
-~/MNN/build/MNNConvert -f ONNX --modelFile /home/jiaojunpeng/isaac/RL/LocomotionWithNP3O-master/bset1.onnx --MNNModel /home/jiaojunpeng/my_dog/TOE-Dog/go2.mnn --bizCode MNN
+~/MNN/build/MNNConvert -f ONNX --modelFile /home/jjp/issac/RL/LocomotionWithNP3O-master/bset1.onnx --MNNModel /home/jjp/dog/TOE-Dog/go2.mnn --bizCode MNN
